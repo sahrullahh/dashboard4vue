@@ -1,0 +1,75 @@
+// without breakpoint
+// how to use media query without breakpoint
+// for example :
+// h1{
+//     @include mobile{
+//        <-- your code for mobile here -->
+//     }
+// }
+
+@mixin screen4k {
+  @media only screen and (max-width: 2560px) and (min-width: 2000px) {
+    @content;
+  }
+}
+
+@mixin dekstop {
+  @media only screen and (max-width: 1920px) and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 992px) and (min-width: 700px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 692px) and (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media only screen and (max-width: 200px) and (min-width: 100px) {
+    @content;
+  }
+}
+// using breakpoint
+// how to use media query with breakpoint
+// for example :
+// h1{
+//     @include respond(mobile){
+//        <-- your code for mobile here -->
+//     }
+// }
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == screen4k {
+    @media only screen and (max-width: 2560px) and (min-width: 2000px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 1920px) and (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 992px) and (min-width: 700px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 692px) and (min-width: 700px) {
+      @content;
+    }
+  }
+}
+
+// Create by Mohammad Sahrullah
+// if not working you can add issues on github

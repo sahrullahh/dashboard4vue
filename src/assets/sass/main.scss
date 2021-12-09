@@ -1,0 +1,37 @@
+@import "_variable.scss";
+* {
+  margin: 0 auto;
+}
+.container {
+  margin-top: 2rem;
+  @include screen4k {
+    max-width: 1200px;
+    width: 100%;
+  }
+  @include dekstop {
+    max-width: 1000px;
+    width: 100%;
+  }
+  @include tablet {
+    max-width: 100%;
+    width: 100%;
+  }
+  @include mobile {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+#app {
+  .flex-box {
+    display: flex;
+    .col-box {
+      max-width: 100%;
+      width: 100%;
+      background-color: #f5f5fb;
+      &:nth-child(1) {
+        max-width: 240px;
+        border-right: 1px solid #dcdcdc;
+      }
+    }
+  }
+}
