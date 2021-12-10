@@ -1,9 +1,32 @@
 #home {
   .box-v1 {
-    h2 {
-      font-family: $GilroySemiBold;
-      color: $textprimary;
-      font-size: 18px;
+    .head-box-v1 {
+      display: flex;
+      .wrap-head {
+        width: 100%;
+        h2 {
+          font-family: $GilroyBold;
+          color: #333;
+          font-size: 20px;
+        }
+        p {
+          font-size: 13px;
+          color: $primary;
+          margin-top: 10px;
+          font-family: $GilroyMedium;
+          font-weight: normal;
+        }
+        .wrap-button {
+          text-align: right;
+          button {
+            margin: 0 8px;
+            @include button-outline;
+            &:nth-child(2) {
+              @include button-solid;
+            }
+          }
+        }
+      }
     }
   }
 }

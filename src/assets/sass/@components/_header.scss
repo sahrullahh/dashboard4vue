@@ -1,0 +1,20 @@
+#header {
+  .header {
+    width: 100%;
+    padding: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    .input-box-search {
+      box-sizing: border-box;
+      input {
+        box-sizing: border-box;
+        padding: 17px;
+        font-family: $GilroyMedium;
+        width: 100%;
+        outline: none;
+        border: none;
+        color: grey;
+      }
+    }
+  }
+}
