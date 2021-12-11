@@ -24,8 +24,46 @@
             &:nth-child(2) {
               @include button-solid;
             }
+            .text {
+              margin-left: 10px;
+            }
           }
         }
+      }
+    }
+    .wrapper-card {
+      margin-top: 3rem;
+      .card {
+        @include card;
+        .flex-card {
+          display: flex;
+          .col {
+            width: 100%;
+            box-sizing: border-box;
+            h2 {
+              font-family: $GilroyBold;
+              margin-top: 0.2rem;
+            }
+            p {
+              font-family: $GilroyRegular;
+              margin-top: 0.5rem;
+            }
+            .icon-circle {
+              padding: 20px;
+              width: 20px;
+              height: 20px;
+              text-align: center;
+              border-radius: 100%;
+              background: #dcdcdc;
+            }
+          }
+        }
+      }
+    }
+    .wrapper-card-graph {
+      margin-top: 2rem;
+      .card {
+        @include card;
       }
     }
   }

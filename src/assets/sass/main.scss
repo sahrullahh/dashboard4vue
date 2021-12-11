@@ -5,22 +5,64 @@
 
 @mixin button-outline {
   padding: 10px 20px;
-  border: 1px solid $primary;
+  border: 1px solid #dcdcdc;
+  user-select: none;
+  cursor: pointer;
   color: $primary;
   border-radius: 4px;
   background-color: transparent;
   font-family: $GilroyRegular;
+  @include btn-animate;
 }
 @mixin button-solid {
   padding: 10px 20px;
+  cursor: pointer;
   border: 1px solid $primary;
+  user-select: none;
   border-radius: 4px;
   color: #fff;
   background-color: $primary;
   font-family: $GilroyRegular;
+  @include btn-animate;
+}
+@mixin card {
+  padding: 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0.3px 0.9px 5.2px rgba(0, 0, 0, 0.012),
+    0.8px 2.1px 12.4px rgba(0, 0, 0, 0.018),
+    1.5px 3.9px 23.4px rgba(0, 0, 0, 0.023),
+    2.7px 6.9px 41.8px rgba(0, 0, 0, 0.029),
+    5px 13px 78.1px rgba(0, 0, 0, 0.035), 12px 31px 187px rgba(0, 0, 0, 0.05);
+}
+@mixin btn-animate {
+  transition: 0.2s ease;
+  &:active {
+    transform: translateY(10px);
+  }
 }
 @import "_variable.scss";
-
+.grid-container {
+  box-sizing: border-box;
+  display: grid;
+  @include dekstop {
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  @include mobile {
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  @include mobile {
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
 .container {
   margin-top: 2rem;
   @include screen4k {
