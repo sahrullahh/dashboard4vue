@@ -1,19 +1,143 @@
 #header {
   .header {
     width: 100%;
+    border-bottom: 1px solid #dcdcdc;
     padding: 8px;
     background: #fff;
     box-sizing: border-box;
-    .input-box-search {
+    box-shadow: 0px 0.1px 0px rgba(0, 0, 0, 0.022),
+      0px 0.3px 0px rgba(0, 0, 0, 0.031), 0px 0.5px 0px rgba(0, 0, 0, 0.039),
+      0px 1.1px 0px rgba(0, 0, 0, 0.048), 0px 3px 0px rgba(0, 0, 0, 0.07);
+    .flex-header {
+      display: flex;
       box-sizing: border-box;
-      input {
+      .col-head {
         box-sizing: border-box;
-        padding: 17px;
-        font-family: $GilroyMedium;
         width: 100%;
-        outline: none;
-        border: none;
-        color: grey;
+
+        .input-box-search {
+          box-sizing: border-box;
+          margin-left: 0;
+          display: flex;
+          width: 100%;
+          // background-color: red;
+          box-sizing: border-box;
+          .col-input {
+            width: 100%;
+            box-sizing: border-box;
+            &:nth-child(1) {
+              max-width: 40px;
+              display: none;
+              @include tablet {
+                display: block;
+              }
+              @include mobile {
+                display: block;
+              }
+            }
+            &:nth-child(2) {
+              max-width: 40px;
+            }
+
+            button {
+              background-color: transparent;
+              border: none;
+              font-size: 15px;
+              color: grey;
+              padding: 17px;
+            }
+            input {
+              box-sizing: border-box;
+              padding: 17px;
+              font-family: $GilroySemiBold;
+              width: 100%;
+              margin-top: 0px;
+              outline: none;
+              border: none;
+              color: grey;
+            }
+          }
+        }
+        .account-head {
+          box-sizing: border-box;
+          .caret {
+            margin-left: 1rem;
+            margin-top: 1rem;
+            color: grey;
+            position: absolute;
+          }
+          .account-body {
+            box-sizing: border-box;
+            float: left;
+            margin-top: 0.4rem;
+            h3 {
+              margin-top: 1px;
+              font-size: 15px;
+              font-family: $GilroyRegular;
+            }
+            p {
+              font-size: 13px;
+              color: grey;
+              font-family: $GilroyRegular;
+            }
+          }
+          img {
+            float: left;
+            margin-left: 20px;
+            max-width: 50px;
+            border-radius: 100%;
+          }
+        }
+        &:nth-child(3) {
+          max-width: 20%;
+        }
+        &:nth-child(4) {
+          max-width: 4%;
+          .logout {
+            margin-top: 1rem;
+            a {
+              color: grey;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include tablet {
+    .header {
+      .flex-header {
+        .col-head {
+          input {
+            display: none;
+          }
+          &:nth-child(3) {
+            max-width: 10%;
+          }
+          .account-head {
+            .account-body {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include mobile {
+    .header {
+      .flex-header {
+        .col-head {
+          input {
+            display: none;
+          }
+          &:nth-child(3) {
+            max-width: 18%;
+          }
+          .account-head {
+            .account-body {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

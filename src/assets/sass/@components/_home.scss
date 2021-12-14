@@ -1,69 +1,172 @@
 #home {
-  .box-v1 {
-    .head-box-v1 {
-      display: flex;
-      .wrap-head {
-        width: 100%;
-        h2 {
-          font-family: $GilroyBold;
-          color: #333;
-          font-size: 20px;
-        }
-        p {
-          font-size: 13px;
-          color: $primary;
-          margin-top: 10px;
-          font-family: $GilroyMedium;
-          font-weight: normal;
-        }
-        .wrap-button {
-          text-align: right;
-          button {
-            margin: 0 8px;
-            @include button-outline;
-            &:nth-child(2) {
-              @include button-solid;
-            }
-            .text {
-              margin-left: 10px;
+  #my-scrollbar {
+    overflow: auto;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    .box-v1 {
+      box-sizing: border-box;
+      height: auto;
+      .head-box-v1 {
+        display: flex;
+        .wrap-head {
+          width: 100%;
+          h2 {
+            font-family: $GilroyBold;
+            color: #333;
+            font-size: 20px;
+          }
+          p {
+            font-size: 13px;
+            color: $primary;
+            margin-top: 10px;
+            font-family: $GilroyMedium;
+            font-weight: normal;
+          }
+          .wrap-button {
+            text-align: right;
+            button {
+              margin: 0 8px;
+              .text {
+                margin-left: 10px;
+              }
             }
           }
         }
       }
-    }
-    .wrapper-card {
-      margin-top: 3rem;
-      .card {
-        @include card;
-        .flex-card {
-          display: flex;
-          .col {
-            width: 100%;
+      .wrapper-card {
+        margin-top: 3rem;
+        box-sizing: border-box;
+        .card {
+          box-sizing: border-box;
+          padding: 20px;
+          @include card;
+          .flex-card {
+            display: flex;
+            .col {
+              width: 100%;
+              box-sizing: border-box;
+              h2 {
+                font-family: $GilroyBold;
+                font-size: 20px;
+                margin-top: 0.2rem;
+              }
+              p {
+                font-family: $GilroyRegular;
+                margin-top: 0.5rem;
+                font-size: 13px;
+              }
+              .icon-circle {
+                padding: 20px;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                border-radius: 100%;
+                background: rgba(254, 77, 97, 0.2);
+                color: #fe4d61;
+              }
+            }
+          }
+          &:nth-child(2) {
+            .flex-card {
+              .col {
+                .icon-circle {
+                  background-color: rgba(254, 184, 1, 0.2);
+                  color: rgb(254, 184, 1);
+                }
+              }
+            }
+          }
+          &:nth-child(3) {
+            .flex-card {
+              .col {
+                .icon-circle {
+                  background-color: rgba(54, 214, 160, 0.2);
+                  color: rgb(54, 214, 160);
+                }
+              }
+            }
+          }
+          &:nth-child(4) {
+            .flex-card {
+              .col {
+                .icon-circle {
+                  background-color: rgba(114, 85, 238, 0.2);
+                  color: rgb(114, 85, 238);
+                }
+              }
+            }
+          }
+        }
+      }
+      .wrapper-card-graph {
+        display: flex;
+        gap: 20px;
+        margin-top: 2rem;
+        box-sizing: border-box;
+        @include tablet {
+          display: block;
+        }
+        @include mobile {
+          display: block;
+        }
+        .card {
+          box-sizing: border-box;
+          .head-card {
+            padding: 20px;
+            @include head-card;
             box-sizing: border-box;
-            h2 {
-              font-family: $GilroyBold;
-              margin-top: 0.2rem;
-            }
-            p {
-              font-family: $GilroyRegular;
-              margin-top: 0.5rem;
-            }
-            .icon-circle {
-              padding: 20px;
-              width: 20px;
-              height: 20px;
-              text-align: center;
-              border-radius: 100%;
-              background: #dcdcdc;
-            }
+          }
+          text-align: left;
+          @include card;
+          @include tablet {
+            margin-top: 20px;
+          }
+          @include mobile {
+            margin-top: 20px;
           }
         }
       }
     }
-    .wrapper-card-graph {
-      margin-top: 2rem;
-      .card {
-        @include card;
+    @include tablet {
+      .box-v1 {
+        .head-box-v1 {
+          text-align: center;
+          display: block;
+          .wrap-head {
+            .wrap-button {
+              margin-top: 2rem;
+              text-align: center;
+              float: none;
+            }
+          }
+        }
+        .wrapper-card {
+        }
+      }
+    }
+    @include mobile {
+      .box-v1 {
+        .head-box-v1 {
+          text-align: center;
+          display: block;
+          .wrap-head {
+            text-align: center;
+            justify-items: center;
+            justify-self: center;
+            .wrap-button {
+              margin-top: 2rem;
+              button {
+                text-align: center;
+                width: 100%;
+                display: block;
+                margin: 10px 0 0 0;
+              }
+            }
+          }
+        }
+        .wrapper-card {
+        }
       }
     }
   }

@@ -4,6 +4,10 @@
 }
 
 body {
+  overflow: hidden;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -51,66 +55,359 @@ body {
   color: #f2f2f2;
   text-align: center;
 }
+#navbar .navbar .menu-item {
+  margin-top: 2rem;
+}
+#navbar .navbar .menu-item .item {
+  padding: 20px;
+  text-align: center;
+  color: #8489a6;
+  font-size: 20px;
+}
+#navbar .navbar .menu-item .active {
+  background-color: #fff;
+  color: #8489a6;
+}
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  #navbar .navbar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  #navbar .navbar {
+    display: none;
+  }
+}
 
 #header .header {
   width: 100%;
+  border-bottom: 1px solid #dcdcdc;
   padding: 8px;
   background: #fff;
   box-sizing: border-box;
+  box-shadow: 0px 0.1px 0px rgba(0, 0, 0, 0.022), 0px 0.3px 0px rgba(0, 0, 0, 0.031), 0px 0.5px 0px rgba(0, 0, 0, 0.039), 0px 1.1px 0px rgba(0, 0, 0, 0.048), 0px 3px 0px rgba(0, 0, 0, 0.07);
 }
-#header .header .input-box-search {
+#header .header .flex-header {
+  display: flex;
   box-sizing: border-box;
 }
-#header .header .input-box-search input {
+#header .header .flex-header .col-head {
+  box-sizing: border-box;
+  width: 100%;
+}
+#header .header .flex-header .col-head .input-box-search {
+  box-sizing: border-box;
+  margin-left: 0;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+#header .header .flex-header .col-head .input-box-search .col-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+#header .header .flex-header .col-head .input-box-search .col-input:nth-child(1) {
+  max-width: 40px;
+  display: none;
+}
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  #header .header .flex-header .col-head .input-box-search .col-input:nth-child(1) {
+    display: block;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  #header .header .flex-header .col-head .input-box-search .col-input:nth-child(1) {
+    display: block;
+  }
+}
+#header .header .flex-header .col-head .input-box-search .col-input:nth-child(2) {
+  max-width: 40px;
+}
+#header .header .flex-header .col-head .input-box-search .col-input button {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  color: grey;
+  padding: 17px;
+}
+#header .header .flex-header .col-head .input-box-search .col-input input {
   box-sizing: border-box;
   padding: 17px;
-  font-family: "GilroyMedium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "GilroySemiBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
+  margin-top: 0px;
   outline: none;
   border: none;
   color: grey;
 }
+#header .header .flex-header .col-head .account-head {
+  box-sizing: border-box;
+}
+#header .header .flex-header .col-head .account-head .caret {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  color: grey;
+  position: absolute;
+}
+#header .header .flex-header .col-head .account-head .account-body {
+  box-sizing: border-box;
+  float: left;
+  margin-top: 0.4rem;
+}
+#header .header .flex-header .col-head .account-head .account-body h3 {
+  margin-top: 1px;
+  font-size: 15px;
+  font-family: "GilroyRegular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#header .header .flex-header .col-head .account-head .account-body p {
+  font-size: 13px;
+  color: grey;
+  font-family: "GilroyRegular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#header .header .flex-header .col-head .account-head img {
+  float: left;
+  margin-left: 20px;
+  max-width: 50px;
+  border-radius: 100%;
+}
+#header .header .flex-header .col-head:nth-child(3) {
+  max-width: 20%;
+}
+#header .header .flex-header .col-head:nth-child(4) {
+  max-width: 4%;
+}
+#header .header .flex-header .col-head:nth-child(4) .logout {
+  margin-top: 1rem;
+}
+#header .header .flex-header .col-head:nth-child(4) .logout a {
+  color: grey;
+}
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  #header .header .flex-header .col-head input {
+    display: none;
+  }
+  #header .header .flex-header .col-head:nth-child(3) {
+    max-width: 10%;
+  }
+  #header .header .flex-header .col-head .account-head .account-body {
+    display: none;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  #header .header .flex-header .col-head input {
+    display: none;
+  }
+  #header .header .flex-header .col-head:nth-child(3) {
+    max-width: 18%;
+  }
+  #header .header .flex-header .col-head .account-head .account-body {
+    display: none;
+  }
+}
 
-#home .box-v1 .head-box-v1 {
+#home #my-scrollbar {
+  overflow: auto;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#home #my-scrollbar .box-v1 {
+  box-sizing: border-box;
+  height: auto;
+}
+#home #my-scrollbar .box-v1 .head-box-v1 {
   display: flex;
 }
-#home .box-v1 .head-box-v1 .wrap-head {
+#home #my-scrollbar .box-v1 .head-box-v1 .wrap-head {
   width: 100%;
 }
-#home .box-v1 .head-box-v1 .wrap-head h2 {
+#home #my-scrollbar .box-v1 .head-box-v1 .wrap-head h2 {
   font-family: "GilroyBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #333;
   font-size: 20px;
 }
-#home .box-v1 .head-box-v1 .wrap-head p {
+#home #my-scrollbar .box-v1 .head-box-v1 .wrap-head p {
   font-size: 13px;
   color: #6f52ed;
   margin-top: 10px;
   font-family: "GilroyMedium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: normal;
 }
-#home .box-v1 .head-box-v1 .wrap-head .wrap-button {
+#home #my-scrollbar .box-v1 .head-box-v1 .wrap-head .wrap-button {
   text-align: right;
 }
-#home .box-v1 .head-box-v1 .wrap-head .wrap-button button {
+#home #my-scrollbar .box-v1 .head-box-v1 .wrap-head .wrap-button button {
   margin: 0 8px;
-  padding: 10px 20px;
-  border: 1px solid #dcdcdc;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: pointer;
-  color: #6f52ed;
+}
+#home #my-scrollbar .box-v1 .head-box-v1 .wrap-head .wrap-button button .text {
+  margin-left: 10px;
+}
+#home #my-scrollbar .box-v1 .wrapper-card {
+  margin-top: 3rem;
+  box-sizing: border-box;
+}
+#home #my-scrollbar .box-v1 .wrapper-card .card {
+  box-sizing: border-box;
+  padding: 20px;
   border-radius: 4px;
-  background-color: transparent;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0.2px 0px -3px rgba(0, 0, 0, 0.022), 0px 0.4px 0px -3px rgba(0, 0, 0, 0.031), 0px 0.9px 0px -3px rgba(0, 0, 0, 0.039), 0px 1.8px 0px -3px rgba(0, 0, 0, 0.048), 0px 5px 0px -3px rgba(0, 0, 0, 0.07);
+}
+#home #my-scrollbar .box-v1 .wrapper-card .card .body-card {
+  padding: 20px;
+  box-sizing: border-box;
+}
+#home #my-scrollbar .box-v1 .wrapper-card .card .flex-card {
+  display: flex;
+}
+#home #my-scrollbar .box-v1 .wrapper-card .card .flex-card .col {
+  width: 100%;
+  box-sizing: border-box;
+}
+#home #my-scrollbar .box-v1 .wrapper-card .card .flex-card .col h2 {
+  font-family: "GilroyBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  margin-top: 0.2rem;
+}
+#home #my-scrollbar .box-v1 .wrapper-card .card .flex-card .col p {
   font-family: "GilroyRegular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  transition: 0.2s ease;
+  margin-top: 0.5rem;
+  font-size: 13px;
 }
-#home .box-v1 .head-box-v1 .wrap-head .wrap-button button:active {
-  transform: translateY(10px);
+#home #my-scrollbar .box-v1 .wrapper-card .card .flex-card .col .icon-circle {
+  padding: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgba(254, 77, 97, 0.2);
+  color: #fe4d61;
 }
-#home .box-v1 .head-box-v1 .wrap-head .wrap-button button:nth-child(2) {
+#home #my-scrollbar .box-v1 .wrapper-card .card:nth-child(2) .flex-card .col .icon-circle {
+  background-color: rgba(254, 184, 1, 0.2);
+  color: #feb801;
+}
+#home #my-scrollbar .box-v1 .wrapper-card .card:nth-child(3) .flex-card .col .icon-circle {
+  background-color: rgba(54, 214, 160, 0.2);
+  color: #36d6a0;
+}
+#home #my-scrollbar .box-v1 .wrapper-card .card:nth-child(4) .flex-card .col .icon-circle {
+  background-color: rgba(114, 85, 238, 0.2);
+  color: #7255ee;
+}
+#home #my-scrollbar .box-v1 .wrapper-card-graph {
+  display: flex;
+  gap: 20px;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  #home #my-scrollbar .box-v1 .wrapper-card-graph {
+    display: block;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  #home #my-scrollbar .box-v1 .wrapper-card-graph {
+    display: block;
+  }
+}
+#home #my-scrollbar .box-v1 .wrapper-card-graph .card {
+  box-sizing: border-box;
+  text-align: left;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0.2px 0px -3px rgba(0, 0, 0, 0.022), 0px 0.4px 0px -3px rgba(0, 0, 0, 0.031), 0px 0.9px 0px -3px rgba(0, 0, 0, 0.039), 0px 1.8px 0px -3px rgba(0, 0, 0, 0.048), 0px 5px 0px -3px rgba(0, 0, 0, 0.07);
+}
+#home #my-scrollbar .box-v1 .wrapper-card-graph .card .head-card {
+  padding: 20px;
+  color: #333;
+  font-family: "GilroyRegular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-bottom: 1px solid #dcdcdc;
+  box-sizing: border-box;
+}
+#home #my-scrollbar .box-v1 .wrapper-card-graph .card .head-card h2 {
+  font-size: 13px;
+}
+#home #my-scrollbar .box-v1 .wrapper-card-graph .card .body-card {
+  padding: 20px;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  #home #my-scrollbar .box-v1 .wrapper-card-graph .card {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  #home #my-scrollbar .box-v1 .wrapper-card-graph .card {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  #home #my-scrollbar .box-v1 .head-box-v1 {
+    text-align: center;
+    display: block;
+  }
+  #home #my-scrollbar .box-v1 .head-box-v1 .wrap-head .wrap-button {
+    margin-top: 2rem;
+    text-align: center;
+    float: none;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  #home #my-scrollbar .box-v1 .head-box-v1 {
+    text-align: center;
+    display: block;
+  }
+  #home #my-scrollbar .box-v1 .head-box-v1 .wrap-head {
+    text-align: center;
+    justify-items: center;
+    justify-self: center;
+  }
+  #home #my-scrollbar .box-v1 .head-box-v1 .wrap-head .wrap-button {
+    margin-top: 2rem;
+  }
+  #home #my-scrollbar .box-v1 .head-box-v1 .wrap-head .wrap-button button {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 10px 0 0 0;
+  }
+}
+
+.grid-container {
+  box-sizing: border-box;
+  display: grid;
+}
+@media only screen and (max-width: 1920px) and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    box-sizing: border-box;
+  }
+}
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  .grid-container {
+    justify-items: center;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  .grid-container {
+    grid-template-columns: auto;
+    grid-column-gap: 20px;
+    box-sizing: border-box;
+    grid-row-gap: 20px;
+  }
+}
+
+.btn-solid {
   padding: 10px 20px;
   cursor: pointer;
   border: 1px solid #6f52ed;
@@ -124,81 +421,39 @@ body {
   font-family: "GilroyRegular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   transition: 0.2s ease;
 }
-#home .box-v1 .head-box-v1 .wrap-head .wrap-button button:nth-child(2):active {
+.btn-solid:active {
   transform: translateY(10px);
 }
-#home .box-v1 .head-box-v1 .wrap-head .wrap-button button .text {
-  margin-left: 10px;
-}
-#home .box-v1 .wrapper-card {
-  margin-top: 3rem;
-}
-#home .box-v1 .wrapper-card .card {
-  padding: 20px;
+
+.btn-outline {
+  padding: 10px 20px;
+  border: 1px solid #dcdcdc;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  color: #6f52ed;
   border-radius: 4px;
-  box-sizing: border-box;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0.3px 0.9px 5.2px rgba(0, 0, 0, 0.012), 0.8px 2.1px 12.4px rgba(0, 0, 0, 0.018), 1.5px 3.9px 23.4px rgba(0, 0, 0, 0.023), 2.7px 6.9px 41.8px rgba(0, 0, 0, 0.029), 5px 13px 78.1px rgba(0, 0, 0, 0.035), 12px 31px 187px rgba(0, 0, 0, 0.05);
-}
-#home .box-v1 .wrapper-card .card .flex-card {
-  display: flex;
-}
-#home .box-v1 .wrapper-card .card .flex-card .col {
-  width: 100%;
-  box-sizing: border-box;
-}
-#home .box-v1 .wrapper-card .card .flex-card .col h2 {
-  font-family: "GilroyBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin-top: 0.2rem;
-}
-#home .box-v1 .wrapper-card .card .flex-card .col p {
+  background-color: transparent;
   font-family: "GilroyRegular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin-top: 0.5rem;
+  transition: 0.2s ease;
 }
-#home .box-v1 .wrapper-card .card .flex-card .col .icon-circle {
-  padding: 20px;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  border-radius: 100%;
-  background: #dcdcdc;
-}
-#home .box-v1 .wrapper-card-graph {
-  margin-top: 2rem;
-}
-#home .box-v1 .wrapper-card-graph .card {
-  padding: 20px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0.3px 0.9px 5.2px rgba(0, 0, 0, 0.012), 0.8px 2.1px 12.4px rgba(0, 0, 0, 0.018), 1.5px 3.9px 23.4px rgba(0, 0, 0, 0.023), 2.7px 6.9px 41.8px rgba(0, 0, 0, 0.029), 5px 13px 78.1px rgba(0, 0, 0, 0.035), 12px 31px 187px rgba(0, 0, 0, 0.05);
+.btn-outline:active {
+  transform: translateY(10px);
 }
 
-.grid-container {
-  box-sizing: border-box;
-  display: grid;
+.mobile {
+  display: none;
 }
-@media only screen and (max-width: 1920px) and (min-width: 1024px) {
-  .grid-container {
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  .mobile {
+    display: block;
   }
 }
-@media only screen and (max-width: 692px) and (min-width: 320px) {
-  .grid-container {
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-  }
-}
-@media only screen and (max-width: 692px) and (min-width: 320px) {
-  .grid-container {
-    grid-template-columns: auto auto;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  .mobile {
+    display: block;
   }
 }
 
@@ -219,19 +474,29 @@ body {
     width: 100%;
   }
 }
-@media only screen and (max-width: 992px) and (min-width: 700px) {
+@media only screen and (max-width: 999px) and (min-width: 700px) {
   .container {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
   }
 }
-@media only screen and (max-width: 692px) and (min-width: 320px) {
+@media only screen and (max-width: 699px) and (min-width: 320px) {
   .container {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
   }
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+  .container {
+    box-sizing: border-box;
+    max-width: 160vh;
+  }
+}
+canvas {
+  box-sizing: border-box;
 }
 
 #app .flex-box {
@@ -245,5 +510,72 @@ body {
 }
 #app .flex-box .col-box:nth-child(1) {
   max-width: 70px;
-  border-right: 1px solid #dcdcdc;
+}
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  #app .flex-box .col-box:nth-child(1) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  #app .flex-box .col-box:nth-child(1) {
+    display: none;
+  }
+}
+
+#myChart {
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1920px) and (min-width: 1024px) {
+  #myChart {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  #myChart {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  #myChart {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+#barChart {
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1920px) and (min-width: 1024px) {
+  #barChart {
+    width: 700px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 999px) and (min-width: 700px) {
+  #barChart {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 699px) and (min-width: 320px) {
+  #barChart {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+#footer {
+  padding: 20px;
+  height: 100px;
+  margin-top: 2rem;
+}
+#footer .copyright-name {
+  text-align: center;
+}
+#footer .copyright-name p {
+  font-size: 13px;
+  color: #333;
+  font-family: "GilroyMedium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }/*# sourceMappingURL=main.css.map */

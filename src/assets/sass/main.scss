@@ -3,6 +3,10 @@
   padding: 0 auto;
 }
 
+body {
+  overflow: hidden;
+}
+
 @mixin button-outline {
   padding: 10px 20px;
   border: 1px solid #dcdcdc;
@@ -25,17 +29,28 @@
   font-family: $GilroyRegular;
   @include btn-animate;
 }
+@mixin head-card {
+  color: #333;
+  font-family: $GilroyRegular;
+  border-bottom: 1px solid #dcdcdc;
+  h2 {
+    font-size: 13px;
+  }
+}
 @mixin card {
-  padding: 20px;
   border-radius: 4px;
   box-sizing: border-box;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0.3px 0.9px 5.2px rgba(0, 0, 0, 0.012),
-    0.8px 2.1px 12.4px rgba(0, 0, 0, 0.018),
-    1.5px 3.9px 23.4px rgba(0, 0, 0, 0.023),
-    2.7px 6.9px 41.8px rgba(0, 0, 0, 0.029),
-    5px 13px 78.1px rgba(0, 0, 0, 0.035), 12px 31px 187px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0.2px 0px -3px rgba(0, 0, 0, 0.022),
+    0px 0.4px 0px -3px rgba(0, 0, 0, 0.031),
+    0px 0.9px 0px -3px rgba(0, 0, 0, 0.039),
+    0px 1.8px 0px -3px rgba(0, 0, 0, 0.048),
+    0px 5px 0px -3px rgba(0, 0, 0, 0.07);
+  .body-card {
+    padding: 20px;
+    box-sizing: border-box;
+  }
 }
 @mixin btn-animate {
   transition: 0.2s ease;
@@ -51,16 +66,34 @@
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    box-sizing: border-box;
   }
-  @include mobile {
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-  }
-  @include mobile {
+  @include tablet {
+    justify-items: center;
     grid-template-columns: auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+  }
+  @include mobile {
+    grid-template-columns: auto;
+    grid-column-gap: 20px;
+    box-sizing: border-box;
+    grid-row-gap: 20px;
+  }
+}
+.btn-solid {
+  @include button-solid;
+}
+.btn-outline {
+  @include button-outline;
+}
+.mobile {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    display: block;
   }
 }
 .container {
@@ -86,7 +119,15 @@
     box-sizing: border-box;
   }
 }
-
+@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+  .container {
+    box-sizing: border-box;
+    max-width: 160vh;
+  }
+}
+canvas {
+  box-sizing: border-box;
+}
 #app {
   .flex-box {
     display: flex;
@@ -97,8 +138,56 @@
       background-color: #f5f5fb;
       &:nth-child(1) {
         max-width: 70px;
-        border-right: 1px solid #dcdcdc;
+        @include tablet {
+          display: none;
+        }
+        @include mobile {
+          display: none;
+        }
       }
+    }
+  }
+}
+#myChart {
+  box-sizing: border-box;
+  @include dekstop {
+    width: 300px;
+    height: 300px;
+  }
+  @include tablet {
+    width: 100px;
+    height: 100px;
+  }
+  @include mobile {
+    width: 100px;
+    height: 100px;
+  }
+}
+#barChart {
+  box-sizing: border-box;
+  @include dekstop {
+    width: 700px;
+    height: 400px;
+  }
+  @include tablet {
+    width: 300px;
+    height: 300px;
+  }
+  @include mobile {
+    width: 200px;
+    height: 300px;
+  }
+}
+#footer {
+  padding: 20px;
+  height: 100px;
+  margin-top: 2rem;
+  .copyright-name {
+    text-align: center;
+    p {
+      font-size: 13px;
+      color: #333;
+      font-family: $GilroyMedium;
     }
   }
 }
